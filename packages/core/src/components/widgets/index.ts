@@ -19,6 +19,7 @@ import TextWidget from './TextWidget';
 import TimeWidget from './TimeWidget';
 import URLWidget from './URLWidget';
 import UpDownWidget from './UpDownWidget';
+import CodeEditorWidget from './CodeEditorWidget';
 
 function widgets<
   T = any,
@@ -45,6 +46,7 @@ function widgets<
     TimeWidget,
     UpDownWidget,
     URLWidget,
+    CodeEditorWidget,
   };
 }
 

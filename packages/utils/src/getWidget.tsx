@@ -27,6 +27,7 @@ const widgetMap: { [k: string]: { [j: string]: string } } = {
     radio: 'RadioWidget',
     select: 'SelectWidget',
     textarea: 'TextareaWidget',
+    code: 'CodeEditorWidget',
     hidden: 'HiddenWidget',
     date: 'DateWidget',
     datetime: 'DateTimeWidget',
