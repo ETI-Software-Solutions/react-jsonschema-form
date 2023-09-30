@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { Simulate } from 'react-dom/test-utils';
 import sinon from 'sinon';
-import { UI_GLOBAL_OPTIONS_KEY } from '@rjsf/utils';
+import { UI_GLOBAL_OPTIONS_KEY } from '@etisoftware/rjsf-utils';
 
 import SchemaField from '../src/components/fields/SchemaField';
 import { createFormComponent, createSandbox, submitForm } from './test_utils';

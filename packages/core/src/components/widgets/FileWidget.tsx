@@ -8,7 +8,7 @@ import {
   StrictRJSFSchema,
   TranslatableString,
   WidgetProps,
-} from '@rjsf/utils';
+} from '@etisoftware/rjsf-utils';
 import Markdown from 'markdown-to-jsx';
 
 function addNameToDataURL(dataURL: string, name: string) {

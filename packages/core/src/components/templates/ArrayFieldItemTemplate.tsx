@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { ArrayFieldTemplateItemType, FormContextType, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { ArrayFieldTemplateItemType, FormContextType, RJSFSchema, StrictRJSFSchema } from '@etisoftware/rjsf-utils';
 
 /** The `ArrayFieldItemTemplate` component is the template used to render an items of an array.
  *

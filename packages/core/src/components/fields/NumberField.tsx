@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { asNumber, FieldProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { asNumber, FieldProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@etisoftware/rjsf-utils';
 
 // Matches a string that ends in a . character, optionally followed by a sequence of
 // digits followed by any number of 0 characters up until the end of the line.

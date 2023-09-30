@@ -1,4 +1,4 @@
-import { DescriptionFieldProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { DescriptionFieldProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@etisoftware/rjsf-utils';
 
 /** The `DescriptionField` is the template to use to render the description of a field
  *

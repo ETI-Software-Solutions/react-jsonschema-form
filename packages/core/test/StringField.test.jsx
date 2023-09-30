@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { act, Simulate } from 'react-dom/test-utils';
 import sinon from 'sinon';
-import { parseDateString, toDateString, TranslatableString, utcToLocal } from '@rjsf/utils';
+import { parseDateString, toDateString, TranslatableString, utcToLocal } from '@etisoftware/rjsf-utils';
 
 import { createFormComponent, createSandbox, getSelectedOptionValue, submitForm } from './test_utils';
 

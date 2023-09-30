@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { getTemplate, FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from '@rjsf/utils';
+import { getTemplate, FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from '@etisoftware/rjsf-utils';
 
 /** The `TimeWidget` component uses the `BaseInputTemplate` changing the type to `time` and transforms
  * the value to undefined when it is falsy during the `onChange` handling.

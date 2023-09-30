@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 import renderer, { TestRendererOptions } from 'react-test-renderer';
-import { RJSFSchema, ErrorSchema } from '@rjsf/utils';
+import { RJSFSchema, ErrorSchema } from '@etisoftware/rjsf-utils';
 import validator from '@rjsf/validator-ajv8';
 
 import { FormProps } from '../src';

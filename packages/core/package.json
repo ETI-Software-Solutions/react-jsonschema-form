@@ -1,5 +1,5 @@
 {
-  "name": "@rjsf/core",
+  "name": "@etisoftware/rjsf-core",
   "version": "5.13.0",
   "description": "A simple React component capable of building HTML forms out of a JSON schema.",
   "scripts": {
@@ -38,12 +38,13 @@
     "node": ">=14"
   },
   "peerDependencies": {
-    "@rjsf/utils": "^5.12.x",
+    "@codemirror/autocomplete": "^0.20.3",
+    "@codemirror/basic-setup": "^0.20.0",
+    "@etisoftware/rjsf-utils": "^5.12.x",
     "react": "^16.14.0 || >=17"
   },
   "dependencies": {
-    "@codemirror/language-data": "^6.3.1",
-    "@uiw/react-codemirror": "^4.21.18",
+    "@codemirror/legacy-modes": "^0.20.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "markdown-to-jsx": "^7.3.2",
@@ -57,7 +58,9 @@
     "@babel/preset-env": "^7.22.15",
     "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.22.15",
-    "@rjsf/utils": "^5.13.0",
+    "@codemirror/autocomplete": "^0.20.3",
+    "@codemirror/basic-setup": "^0.20.0",
+    "@etisoftware/rjsf-utils": "^5.13.0",
     "@rjsf/validator-ajv6": "^5.13.0",
     "@rjsf/validator-ajv8": "^5.13.0",
     "@types/lodash": "^4.14.198",

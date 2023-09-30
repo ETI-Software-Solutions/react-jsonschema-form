@@ -33,7 +33,7 @@ import {
   validationDataMerge,
   ValidatorType,
   Experimental_DefaultFormStateBehavior,
-} from '@rjsf/utils';
+} from '@etisoftware/rjsf-utils';
 import _get from 'lodash/get';
 import _isEmpty from 'lodash/isEmpty';
 import _pick from 'lodash/pick';

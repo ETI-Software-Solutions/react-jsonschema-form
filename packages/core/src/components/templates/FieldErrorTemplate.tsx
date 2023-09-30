@@ -1,4 +1,4 @@
-import { errorId, FieldErrorProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { errorId, FieldErrorProps, FormContextType, RJSFSchema, StrictRJSFSchema } from '@etisoftware/rjsf-utils';
 
 /** The `FieldErrorTemplate` component renders the errors local to the particular field
  *

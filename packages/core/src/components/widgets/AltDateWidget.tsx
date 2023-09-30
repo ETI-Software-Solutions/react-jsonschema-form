@@ -10,7 +10,7 @@ import {
   StrictRJSFSchema,
   TranslatableString,
   WidgetProps,
-} from '@rjsf/utils';
+} from '@etisoftware/rjsf-utils';
 
 function rangeOptions(start: number, stop: number) {
   const options = [];

@@ -10,10 +10,10 @@
     <img src="https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/logo.png" alt="Logo" width="180" height="120">
   </a>
 
-  <h3 align="center">@rjsf/core</h3>
+  <h3 align="center">@etisoftware/rjsf-core</h3>
 
   <p align="center">
-  Core logic and classic Bootstrap 3 theme for <a href="https://github.com/rjsf-team/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
+  Core logic and classic Bootstrap 3 theme for <a href="https://github.com/ETI-Software-Solutions/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
     <br />
     <a href="https://rjsf-team.github.io/react-jsonschema-form/docs/"><strong>Explore the docs »</strong></a>
     <br />
@@ -49,7 +49,7 @@ Core logic and classic Bootstrap 3 theme for `react-jsonschema-form`.
 
 ### Built With
 
-- [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form/)
+- [react-jsonschema-form](https://github.com/ETI-Software-Solutions/react-jsonschema-form/)
 - [Bootstrap 3](https://getbootstrap.com/docs/3.3/)
 
 <!-- GETTING STARTED -->
@@ -69,20 +69,20 @@ To use the default Bootstrap 3 theme, add a Bootstrap 3 CSS tag to your HTML pag
 ### Installation
 
 ```sh
-npm install @rjsf/core
+npm install @etisoftware/rjsf-core
 ```
 
 ## Usage
 
 ```javascript
-import Form from '@rjsf/core';
+import Form from '@etisoftware/rjsf-core';
 ```
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the general [open issues](https://github.com/rjsf-team/react-jsonschema-form/issues).
+See the general [open issues](https://github.com/ETI-Software-Solutions/react-jsonschema-form/issues).
 
 <!-- CONTRIBUTING -->
 
@@ -94,9 +94,9 @@ Read our [contributors' guide](https://rjsf-team.github.io/react-jsonschema-form
 
 ## Contact
 
-rjsf team: [https://github.com/orgs/rjsf-team/people](https://github.com/orgs/rjsf-team/people)
+ETI Software: [https://github.com/orgs/ETI-Software-Solutions/people](https://github.com/orgs/ETI-Software-Solutions/people)
 
-GitHub repository: [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
+GitHub repository: [https://github.com/ETI-Software-Solutions/react-jsonschema-form](https://github.com/ETI-Software-Solutions/react-jsonschema-form)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

@@ -11,10 +11,10 @@
     <img src="https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/7ebc86621d8df8c21f0c39bcca6d476f6f7a2051/packages/utils/logo.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">@rjsf/utils</h3>
+  <h3 align="center">@etisoftware/rjsf-utils</h3>
 
   <p align="center">
-  Utility functions for <a href="https://github.com/rjsf-team/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
+  Utility functions for <a href="https://github.com/ETI-Software-Solutions/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
     <br />
     <a href="https://rjsf-team.github.io/react-jsonschema-form/docs/"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,7 +50,7 @@ Exports `utils` functions for `react-jsonschema-form`.
 
 ### Built With
 
-- [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form/)
+- [react-jsonschema-form](https://github.com/ETI-Software-Solutions/react-jsonschema-form/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 <!-- GETTING STARTED -->
@@ -60,7 +60,7 @@ Exports `utils` functions for `react-jsonschema-form`.
 ### Installation
 
 ```bash
-yarn add @rjsf/utils
+yarn add @etisoftware/rjsf-utils
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -68,7 +68,7 @@ yarn add @rjsf/utils
 ## Usage
 
 ```jsx
-import * as Utils from '@rjsf/utils';
+import * as Utils from '@etisoftware/rjsf-utils';
 ```
 
 ## Documentation
@@ -79,7 +79,7 @@ import * as Utils from '@rjsf/utils';
 
 ## Roadmap
 
-See the [open issues](https://github.com/rjsf-team/react-jsonschema-form/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ETI-Software-Solutions/react-jsonschema-form/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -91,9 +91,9 @@ Read our [contributors' guide](https://rjsf-team.github.io/react-jsonschema-form
 
 ## Contact
 
-rjsf team: [https://github.com/orgs/rjsf-team/people](https://github.com/orgs/rjsf-team/people)
+ETI Software: [https://github.com/orgs/ETI-Software-Solutions/people](https://github.com/orgs/rjsf-team/people)
 
-GitHub repository: [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
+GitHub repository: [https://github.com/ETI-Software-Solutions/react-jsonschema-form](https://github.com/ETI-Software-Solutions/react-jsonschema-form)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

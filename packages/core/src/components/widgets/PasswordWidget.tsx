@@ -1,4 +1,4 @@
-import { getTemplate, FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from '@rjsf/utils';
+import { getTemplate, FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from '@etisoftware/rjsf-utils';
 
 /** The `PasswordWidget` component uses the `BaseInputTemplate` changing the type to `password`.
  *
