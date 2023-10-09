@@ -4,6 +4,9 @@ import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
 import { jinja2 } from '@codemirror/legacy-modes/mode/jinja2';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { beautifyJinja } from '@etisoftware/jinja2-beautify';
 import {
   ariaDescribedByIds,
   FormContextType,
@@ -149,7 +152,7 @@ export default function CodeEditorWidget<
     if (editorRef.current) {
       const lightTheme = [customTheme, syntaxHighlighting(customThemeHighlightStyle)];
       const startState = EditorState.create({
-        doc: value,
+        doc: beautifyJinja(value),
         extensions: [
           basicSetup,
           keymap.of([indentWithTab]),

@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@codemirror/legacy-modes": "^0.20.0",
+    "@etisoftware/jinja2-beautify": "^0.1.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "markdown-to-jsx": "^7.3.2",
