@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EditorView, keymap } from '@codemirror/view';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
@@ -24,9 +24,9 @@ export default function CodeEditorWidget<
   T = any,
   S extends StrictRJSFSchema = RJSFSchema,
   F extends FormContextType = any
->({ id, value, readonly = false }: WidgetProps<T, S, F>) {
-  const chalky = '#ce9429',
-    coral = '#c02834',
+>({ id, value, readonly = false, onChange }: WidgetProps<T, S, F>) {
+  const chalky = '#353a42',
+    coral = '#235066',
     cyan = '#348690',
     invalid = '#ffffff',
     ivory = '#6e7a90',
@@ -72,7 +72,7 @@ export default function CodeEditorWidget<
       '.cm-gutters': {
         backgroundColor: background,
         color: stone,
-        border: 'none',
+        borderRight: '1px solid #ccc',
       },
       '.cm-activeLineGutter': {
         backgroundColor: highlightBackground,
@@ -147,30 +147,65 @@ export default function CodeEditorWidget<
   ]);
 
   const editorRef = useRef(null);
+  const [anchor, setAnchor] = useState(0);
+
+  const lightTheme = [customTheme, syntaxHighlighting(customThemeHighlightStyle)];
+  const startState = EditorState.create({
+    doc: value ? beautifyJinja(value) : '',
+    extensions: [
+      basicSetup,
+      keymap.of([indentWithTab]),
+      EditorState.readOnly.of(readonly),
+      StreamLanguage.define(jinja2),
+      lightTheme,
+      EditorView.updateListener.of((v) => {
+        if (v.docChanged) {
+          setAnchor(v.view.state.selection.main.anchor);
+          const currentValue = v.view.state.doc.toString();
+          if (v.view && value !== currentValue) {
+            onChange(currentValue);
+            v.view.dispatch({
+              changes: { from: 0, insert: value },
+            });
+          }
+        }
+      }),
+    ],
+  });
 
   useEffect(() => {
-    if (editorRef.current) {
-      const lightTheme = [customTheme, syntaxHighlighting(customThemeHighlightStyle)];
-      const startState = EditorState.create({
-        doc: beautifyJinja(value),
-        extensions: [
-          basicSetup,
-          keymap.of([indentWithTab]),
-          EditorState.readOnly.of(readonly),
-          StreamLanguage.define(jinja2),
-          lightTheme,
-        ],
-      });
-
-      const view = new EditorView({ state: startState, parent: editorRef.current });
-
-      return () => {
-        view.destroy();
-      };
-    } else {
+    if (editorRef.current === null) {
       return;
     }
-  }, [customThemeHighlightStyle, customTheme, readonly, value]);
 
-  return <div id={id} ref={editorRef} aria-describedby={ariaDescribedByIds(id)} />;
+    const view = new EditorView({
+      state: startState,
+      parent: editorRef.current,
+    });
+
+    if (!view.hasFocus) {
+      view.focus();
+      view.dispatch({
+        selection: {
+          anchor: value.length < anchor ? value.length : anchor,
+        },
+      });
+    }
+
+    return () => {
+      view.destroy();
+    };
+  }, [anchor, startState, value.length]);
+
+  return (
+    <div
+      id={id}
+      ref={editorRef}
+      style={{
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+      }}
+      aria-describedby={ariaDescribedByIds(id)}
+    />
+  );
 }
