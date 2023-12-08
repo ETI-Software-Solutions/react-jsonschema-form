@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { EditorView, keymap } from '@codemirror/view';
-import { indentWithTab } from '@codemirror/commands';
+import { defaultKeymap, indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
 import { jinja2 } from '@codemirror/legacy-modes/mode/jinja2';
@@ -149,23 +149,30 @@ export default function CodeEditorWidget<
   const editorRef = useRef(null);
   const [anchor, setAnchor] = useState(0);
 
+  const handleOnChange = useCallback(
+    (value) => {
+      onChange(value);
+    },
+    [onChange]
+  );
+
   const lightTheme = [customTheme, syntaxHighlighting(customThemeHighlightStyle)];
   const startState = EditorState.create({
-    doc: value ? beautifyJinja(value) : '',
+    doc: value ? value : '',
     extensions: [
       basicSetup,
-      keymap.of([indentWithTab]),
+      keymap.of([...defaultKeymap, indentWithTab]),
       EditorState.readOnly.of(readonly),
       StreamLanguage.define(jinja2),
       lightTheme,
       EditorView.updateListener.of((v) => {
         if (v.docChanged) {
-          setAnchor(v.view.state.selection.main.anchor);
-          const currentValue = v.view.state.doc.toString();
+          const currentValue = beautifyJinja(v.view.state.doc.toString());
           if (v.view && value !== currentValue) {
-            onChange(currentValue);
+            setAnchor(v.view.state.selection.main.anchor);
+            handleOnChange(currentValue);
             v.view.dispatch({
-              changes: { from: 0, insert: value },
+              changes: { from: 0, insert: currentValue },
             });
           }
         }
@@ -187,7 +194,7 @@ export default function CodeEditorWidget<
       view.focus();
       view.dispatch({
         selection: {
-          anchor: value.length < anchor ? value.length : anchor,
+          anchor: Math.min(value.length, anchor),
         },
       });
     }
