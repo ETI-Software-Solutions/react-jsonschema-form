@@ -1,6 +1,6 @@
 {
   "name": "@etisoftware/rjsf-core",
-  "version": "5.13.0",
+  "version": "5.13.0-alpha.0",
   "description": "A simple React component capable of building HTML forms out of a JSON schema.",
   "scripts": {
     "build:ts": "rimraf lib && tsc",
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@codemirror/legacy-modes": "^0.20.0",
-    "@etisoftware/jinja2-beautify": "^0.1.0",
+    "@etisoftware/jinja2-beautify": "^0.1.1",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "markdown-to-jsx": "^7.3.2",

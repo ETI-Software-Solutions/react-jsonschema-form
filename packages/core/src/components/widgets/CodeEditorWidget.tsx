@@ -158,7 +158,7 @@ export default function CodeEditorWidget<
 
   const lightTheme = [customTheme, syntaxHighlighting(customThemeHighlightStyle)];
   const startState = EditorState.create({
-    doc: value ? value : '',
+    doc: beautifyJinja(value),
     extensions: [
       basicSetup,
       keymap.of([...defaultKeymap, indentWithTab]),
@@ -194,7 +194,7 @@ export default function CodeEditorWidget<
       view.focus();
       view.dispatch({
         selection: {
-          anchor: Math.min(value.length, anchor),
+          anchor: Math.min(view.state.doc.toString().length, anchor),
         },
       });
     }
@@ -202,7 +202,7 @@ export default function CodeEditorWidget<
     return () => {
       view.destroy();
     };
-  }, [anchor, startState, value.length]);
+  }, [anchor, startState]);
 
   return (
     <div
